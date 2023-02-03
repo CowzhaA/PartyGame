@@ -22,6 +22,7 @@ public class deplacements : MonoBehaviour
         if (horizontal != 0f)
         {
             transform.position += new Vector3(horizontal * Time.deltaTime * speed, 0f, 0f);
+            transform.forward += new Vector3(horizontal * Time.deltaTime * speed, 0f, 0f);
         }
             
         float vertical = Input.GetAxis("vertical-joystick");
@@ -29,11 +30,12 @@ public class deplacements : MonoBehaviour
         if (vertical != 0f)
         {
             transform.position += new Vector3(0f, 0f, -vertical * Time.deltaTime * speed);
+            transform.forward += new Vector3(0f, 0f, -vertical * Time.deltaTime * (speed*5));
         }
             
-        var targetAngle = Mathf.Atan2(horizontal, vertical) * Mathf.Rad2Deg;
-        var angle = Mathf.SmoothDampAngle(transform.eulerAngles.y, - targetAngle, ref _currentVelocity, smoothTime);
-        transform.rotation = Quaternion.Euler(0.0f, angle, 0.0f);
+        //var targetAngle = Mathf.Atan2(horizontal, vertical) * Mathf.Rad2Deg;
+        //var angle = Mathf.SmoothDampAngle(transform.eulerAngles.y, - targetAngle, ref _currentVelocity, smoothTime);
+        //transform.rotation = Quaternion.Euler(0.0f, angle, 0.0f);
 
 
     }
