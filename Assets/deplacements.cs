@@ -33,9 +33,6 @@ public class deplacements : MonoBehaviour
             transform.forward += new Vector3(0f, 0f, -vertical * Time.deltaTime * (speed*5));
         }
             
-        //var targetAngle = Mathf.Atan2(horizontal, vertical) * Mathf.Rad2Deg;
-        //var angle = Mathf.SmoothDampAngle(transform.eulerAngles.y, - targetAngle, ref _currentVelocity, smoothTime);
-        //transform.rotation = Quaternion.Euler(0.0f, angle, 0.0f);
 
 
     }
