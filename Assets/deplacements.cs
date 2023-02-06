@@ -33,8 +33,5 @@ public class deplacements : MonoBehaviour
             transform.position += new Vector3(0f, 0f, -vertical * Time.deltaTime * speed);
             transform.forward += new Vector3(0f, 0f, -vertical * Time.deltaTime * (speed*5));
         }
-            
-
-
     }
 }
