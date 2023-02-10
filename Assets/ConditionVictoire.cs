@@ -10,8 +10,10 @@ public class ConditionVictoire : MonoBehaviour
         compteur = 0;
     }
 
-    private void OnTriggerEnter()
+    private void OnCollisionEnter()
     {
         compteur = compteur + 1;
+        Destroy(gameObject);
+        Debug.Log("MORT");
     }
 }
