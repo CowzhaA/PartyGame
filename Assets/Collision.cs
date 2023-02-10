@@ -4,15 +4,13 @@ using UnityEngine;
 
 public class Collision : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public int force;
 
-    // Update is called once per frame
-    void Update()
+    private void OnCollisionEnter(UnityEngine.Collision c)
     {
-        
+        if (c.gameObject.tag==("Player"))
+        {
+            GetComponent<Rigidbody>().AddForce(c.contacts[0].normal * force);
+        }
     }
 }

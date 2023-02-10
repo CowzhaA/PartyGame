@@ -593,10 +593,20 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8513471214993855500, guid: 93e07e88fc3e4764faf495f4c0815e92,
+        type: 3}
+      propertyPath: m_Mass
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 8513471214993855503, guid: 93e07e88fc3e4764faf495f4c0815e92,
         type: 3}
       propertyPath: m_Name
       value: perso2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8585250388399927908, guid: 93e07e88fc3e4764faf495f4c0815e92,
+        type: 3}
+      propertyPath: force
+      value: 2000
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 93e07e88fc3e4764faf495f4c0815e92, type: 3}
@@ -686,10 +696,20 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+    - target: {fileID: 8513471214993855500, guid: 93e07e88fc3e4764faf495f4c0815e92,
+        type: 3}
+      propertyPath: m_Mass
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 8513471214993855503, guid: 93e07e88fc3e4764faf495f4c0815e92,
         type: 3}
       propertyPath: m_Name
       value: perso1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8585250388399927908, guid: 93e07e88fc3e4764faf495f4c0815e92,
+        type: 3}
+      propertyPath: force
+      value: 2000
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 93e07e88fc3e4764faf495f4c0815e92, type: 3}
