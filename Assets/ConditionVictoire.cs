@@ -11,16 +11,19 @@ public class ConditionVictoire : MonoBehaviour
         compteur = 0;
     }
 
-    private void OnCollisionEnter()
+    void OnTriggerEnter(Collider collider)
     {
-        compteur = compteur + 1;
-        Destroy(gameObject);
-        Debug.Log("MORT");
+        Destroy(collider.gameObject);
+        //if (collider.gameObject.tag == "Player")
+        //{
+            compteur = compteur + 1;
+            Debug.Log("MORT");
+       // }
     }
 
     public void EndGame()
     {
-        if (compteur >= 3)
+        if (compteur > 2)
         {
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
             Debug.Log("END");
