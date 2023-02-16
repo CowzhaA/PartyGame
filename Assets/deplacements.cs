@@ -57,14 +57,12 @@ using UnityEngine;
 public class deplacements : MonoBehaviour
 {
     public int joueur;
-    Animator m_Animator;
     public Animator myAnim;
-    public bool isRunning;
 
     // Start is called before the first frame update
     void Start()
     {
-        m_Animator = gameObject.GetComponent<Animator>();
+
     }
 
     // Update is called once per frame
@@ -77,20 +75,20 @@ public class deplacements : MonoBehaviour
 
         if (Mathf.Abs(vertical) >= 0.2f)
         {
-            isRunning = true;
+            myAnim.SetBool("isRunning", true);
             transform.position += new Vector3(speed * horizontal * Time.deltaTime, 0f, speed * vertical * Time.deltaTime);
             transform.forward = new Vector3(speed * horizontal * Time.deltaTime, 0f, speed * vertical * Time.deltaTime);
         }
         else if (Mathf.Abs(horizontal) >= 0.2f)
         {
-            isRunning = true;
+            myAnim.SetBool("isRunning", true);
             transform.position += new Vector3(speed * horizontal * Time.deltaTime, 0f, speed * vertical * Time.deltaTime);
             transform.forward = new Vector3(speed * horizontal * Time.deltaTime, 0f, speed * -vertical * Time.deltaTime);
         }
         else
         {
-            isRunning = false;
+            myAnim.SetBool("isRunning", false);
         }
-        m_Animator.SetBool("isRunning", isRunning);
+        
     }
 }
