@@ -14,11 +14,8 @@ public class ConditionVictoire : MonoBehaviour
     void OnTriggerEnter(Collider collider)
     {
         Destroy(collider.gameObject);
-        //if (collider.gameObject.tag == "Player")
-        //{
             compteur = compteur + 1;
             Debug.Log("MORT");
-       // }
     }
 
     public void EndGame()
