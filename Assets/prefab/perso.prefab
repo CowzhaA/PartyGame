@@ -81,10 +81,16 @@ MonoBehaviour:
   myAnim: {fileID: 0}
   AffichageVie: {fileID: 0}
   AffichageMort: {fileID: 0}
+  AffichageVictoire: {fileID: 0}
   GameManager: {fileID: 0}
   Moi: {fileID: 0}
+  IsDashing: 0
+  CanDash: 0
   speed: 8000
-  maxspeed: 8
+  maxspeed: 3
+  dashSpeed: 0
+  dashDuration: 0
+  dashCoolDown: 0
 --- !u!114 &8585250388399927908
 MonoBehaviour:
   m_ObjectHideFlags: 0

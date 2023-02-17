@@ -8,9 +8,11 @@ public class Collision : MonoBehaviour
 
     private void OnCollisionEnter(UnityEngine.Collision c)
     {
-        if (c.gameObject.layer == 3)
+        if (c.gameObject.layer == LayerMask.NameToLayer("Player"))
         {
-            c.gameObject.GetComponent<Rigidbody>().AddForce(c.contacts[0].normal * force);
+            Vector3 dir = c.transform.position - transform.position;
+            dir = dir.normalized;
+            c.gameObject.GetComponent<Rigidbody>().AddForce(dir * force);
         }
     }
 }

@@ -41,7 +41,7 @@ public class deplacements : MonoBehaviour
         float horizontal = Input.GetAxis("horizontal-joystick" + joueur);
         float vertical = Input.GetAxis("vertical-joystick" + joueur);
         Vector2 mouvement = new Vector2(horizontal, vertical).normalized;
-        bool dash = Input.GetButtonDown("Dash1");
+        bool dash = Input.GetButtonDown("Dash"+joueur);
 
         if (vertical != 0f || horizontal != 0f)
         {
@@ -54,6 +54,10 @@ public class deplacements : MonoBehaviour
                 rb.velocity = rb.velocity.normalized * maxspeed;
             }
         }
+        else
+        {
+            myAnim.SetBool("isRunning", false);
+        }
         if (dash == true && CanDash == true)
         {
             StartCoroutine(DashInitiate());
@@ -61,9 +65,8 @@ public class deplacements : MonoBehaviour
         }
         else
         {
-            myAnim.SetBool("isRunning", false);
+            
         }
-
     }
     private IEnumerator DashInitiate()
     {
