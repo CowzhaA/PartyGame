@@ -77,8 +77,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9028b0fa3ac3f934fa3f1d6039dece35, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 3
   joueur: 0
+  myAnim: {fileID: 0}
+  AffichageVie: {fileID: 0}
+  AffichageMort: {fileID: 0}
+  GameManager: {fileID: 0}
+  Moi: {fileID: 0}
+  speed: 6000
 --- !u!114 &8585250388399927908
 MonoBehaviour:
   m_ObjectHideFlags: 0
