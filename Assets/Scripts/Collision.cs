@@ -8,9 +8,9 @@ public class Collision : MonoBehaviour
 
     private void OnCollisionEnter(UnityEngine.Collision c)
     {
-        if (c.gameObject.tag==("Player"))
+        if (c.gameObject.layer == 3)
         {
-            GetComponent<Rigidbody>().AddForce(c.contacts[0].normal * force);
+            c.gameObject.GetComponent<Rigidbody>().AddForce(c.contacts[0].normal * force);
         }
     }
 }
