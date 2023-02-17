@@ -1606,10 +1606,6 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 579984077, guid: 93e07e88fc3e4764faf495f4c0815e92, type: 3}
-      propertyPath: speed
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 579984077, guid: 93e07e88fc3e4764faf495f4c0815e92, type: 3}
       propertyPath: joueur
       value: 3
       objectReference: {fileID: 0}
@@ -2735,10 +2731,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 579984077, guid: 93e07e88fc3e4764faf495f4c0815e92, type: 3}
-      propertyPath: speed
-      value: 3
-      objectReference: {fileID: 0}
     - target: {fileID: 579984077, guid: 93e07e88fc3e4764faf495f4c0815e92, type: 3}
       propertyPath: joueur
       value: 2

@@ -65,6 +65,7 @@ public class deplacements : MonoBehaviour
     public GameObject Moi;
     private Rigidbody rb;
     public float speed;
+    public float maxspeed;
 
 
     // Start is called before the first frame update
@@ -80,15 +81,20 @@ public class deplacements : MonoBehaviour
         float horizontal = Input.GetAxis("horizontal-joystick" + joueur);
         //Debug.Log(horizontal);
         float vertical = Input.GetAxis("vertical-joystick" + joueur);
-        Vector2 mouvement = new Vector2(horizontal, vertical);
+        Vector2 mouvement = new Vector2(horizontal, vertical).normalized;
 
         if (vertical != 0f || horizontal != 0f)
         {
             myAnim.SetBool("isRunning", true);
             rb.AddForce(mouvement.x * Time.deltaTime * speed, 0f, mouvement.y * Time.deltaTime * speed);
             transform.forward = new Vector3(mouvement.x, 0f, mouvement.y);
-
+            
+            if (rb.velocity.magnitude > maxspeed)
+            {
+                rb.velocity = rb.velocity.normalized * maxspeed;
+            }
         }
+
         else
         {
             myAnim.SetBool("isRunning", false);
