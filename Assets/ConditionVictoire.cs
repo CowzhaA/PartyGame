@@ -5,25 +5,12 @@ using UnityEngine.SceneManagement;
 
 public class ConditionVictoire : MonoBehaviour
 {
-    int compteur;
-    void Start()
-    {
-        compteur = 0;
-    }
-
+    public GameManager GameManage;
     void OnTriggerEnter(Collider collider)
     {
         Destroy(collider.gameObject);
-            compteur = compteur + 1;
-            Debug.Log("MORT");
-    }
-
-    public void EndGame()
-    {
-        if (compteur > 2)
-        {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
-            Debug.Log("END");
-        }
+        GameManage.GetComponent<GameManager>().PersoMort(collider.tag);
+        
+            
     }
 }

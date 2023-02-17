@@ -51,6 +51,7 @@ public class deplacements : MonoBehaviour
 
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 
@@ -58,11 +59,15 @@ public class deplacements : MonoBehaviour
 {
     public int joueur;
     public Animator myAnim;
+    public GameObject AffichageVie;
+    public GameObject AffichageMort;
+    public GameManager GameManager;
+    public GameObject Moi;
 
     // Start is called before the first frame update
     void Start()
     {
-
+        AjoutPlayer();
     }
 
     // Update is called once per frame
@@ -90,5 +95,16 @@ public class deplacements : MonoBehaviour
             myAnim.SetBool("isRunning", false);
         }
         
+    }
+
+    public void ModifAffichage() 
+    {
+        AffichageVie.SetActive(false);
+        AffichageMort.SetActive(true);
+    }
+
+    public void AjoutPlayer()
+    {
+        //GameManager.GetComponent<GameManager>().Players.AddRange();
     }
 }
