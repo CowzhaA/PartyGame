@@ -83,7 +83,8 @@ MonoBehaviour:
   AffichageMort: {fileID: 0}
   GameManager: {fileID: 0}
   Moi: {fileID: 0}
-  speed: 6000
+  speed: 8000
+  maxspeed: 8
 --- !u!114 &8585250388399927908
 MonoBehaviour:
   m_ObjectHideFlags: 0
