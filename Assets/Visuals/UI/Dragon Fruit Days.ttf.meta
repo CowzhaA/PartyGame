@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 734ade416ac9bf74eb8d0822c693b4be
+guid: 91fa32da5bca32d41801112892a361f0
 TrueTypeFontImporter:
   externalObjects: {}
   serializedVersion: 4
@@ -9,7 +9,7 @@ TrueTypeFontImporter:
   characterPadding: 1
   includeFontData: 1
   fontNames:
-  - BIRTLOVE - Personal Use
+  - Dragon Fruit Days
   fallbackFontReferences: []
   customCharacters: 
   fontRenderingMode: 0
