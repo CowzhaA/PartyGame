@@ -10,7 +10,5 @@ public class ConditionVictoire : MonoBehaviour
     {
         Destroy(collider.gameObject);
         GameManage.GetComponent<GameManager>().PersoMort(collider.tag);
-        
-            
     }
 }
