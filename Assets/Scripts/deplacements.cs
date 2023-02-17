@@ -63,32 +63,31 @@ public class deplacements : MonoBehaviour
     public GameObject AffichageMort;
     public GameManager GameManager;
     public GameObject Moi;
+    private Rigidbody rb;
+    public float speed;
+
 
     // Start is called before the first frame update
     void Start()
     {
         AjoutPlayer();
+        rb = GetComponent<Rigidbody>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        float speed = 2;
         float horizontal = Input.GetAxis("horizontal-joystick" + joueur);
+        //Debug.Log(horizontal);
         float vertical = Input.GetAxis("vertical-joystick" + joueur);
+        Vector2 mouvement = new Vector2(horizontal, vertical);
 
-
-        if (Mathf.Abs(vertical) >= 0.2f)
+        if (vertical != 0f || horizontal != 0f)
         {
             myAnim.SetBool("isRunning", true);
-            transform.position += new Vector3(speed * horizontal * Time.deltaTime, 0f, speed * vertical * Time.deltaTime);
-            transform.forward = new Vector3(speed * horizontal * Time.deltaTime, 0f, speed * vertical * Time.deltaTime);
-        }
-        else if (Mathf.Abs(horizontal) >= 0.2f)
-        {
-            myAnim.SetBool("isRunning", true);
-            transform.position += new Vector3(speed * horizontal * Time.deltaTime, 0f, speed * vertical * Time.deltaTime);
-            transform.forward = new Vector3(speed * horizontal * Time.deltaTime, 0f, speed * -vertical * Time.deltaTime);
+            rb.AddForce(mouvement.x * Time.deltaTime * speed, 0f, mouvement.y * Time.deltaTime * speed);
+            transform.forward = new Vector3(mouvement.x, 0f, mouvement.y);
+
         }
         else
         {
