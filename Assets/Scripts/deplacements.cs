@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
-
+using UnityEngine.SceneManagement;
 
 public class deplacements : MonoBehaviour
 {
@@ -93,8 +93,20 @@ public class deplacements : MonoBehaviour
         GameManager.GetComponent<GameManager>().Players.Add(Moi);
     }
 
+   
+
     public void Bravo()
     {
         AffichageVictoire.SetActive(true);
+        StartCoroutine(WaitOneFrame());
+    }
+
+    IEnumerator WaitOneFrame()
+    {
+        //code
+        yield return new WaitForSecondsRealtime(5);
+        SceneManager.LoadScene(0);
+        //code éventuel
     }
 }
+
